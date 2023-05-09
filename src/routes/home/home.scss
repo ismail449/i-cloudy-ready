@@ -1,0 +1,88 @@
+.home {
+  background-image: linear-gradient(
+    115.01deg,
+    #97e0f3 -32.65%,
+    #ffffff 42.43%,
+    #00244d 26.1%,
+    #1769c6 170.66%
+  );
+  .home-container {
+    padding-top: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .home-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .home-logo {
+        display: flex;
+        align-items: center;
+        .home-title {
+          color: var(--i-cloudy-klein-blue);
+          font-size: var(--i-cloudy-font-size-x-x-large);
+          margin-right: 5px;
+        }
+      }
+    }
+    .home-card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      .ant-card-cover {
+        padding: 20px;
+      }
+      .ant-card-body {
+        padding: 0px;
+      }
+      .card-body {
+        color: var(--i-cloudy-white-smoke);
+        border-radius: 8px;
+        padding: 16px;
+        font-size: var(--i-cloudy-font-size-large);
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .card-body-title {
+          font-weight: 400;
+          font-size: var(--i-cloudy-font-size-large);
+          margin: 0;
+        }
+        .card-body-description {
+          font-size: var(--i-cloudy-font-size-medium);
+          margin: 0;
+        }
+        .card-body-actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .icon {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    .DTSUs-section {
+      margin-top: 30px;
+      padding-bottom: 70px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: var(--i-cloudy-font-size-x-small);
+      color: var(--i-cloudy-white-smoke);
+      .DTSUs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .remaining {
+        margin-right: 30px;
+      }
+    }
+  }
+}
