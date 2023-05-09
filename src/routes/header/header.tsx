@@ -1,15 +1,22 @@
+import { useContext } from "react";
 import { Outlet } from "react-router-dom";
-import "./header.scss";
+
 import Icon, { UserOutlined } from "@ant-design/icons";
 import { Avatar, Badge } from "antd";
+import { SidebarContext } from "../../context/sidebar-context";
+import { CartContext } from "../../context/cart-context";
 import { ReactComponent as Subtraction } from "../../assets/svg/Subtraction 2.svg";
 import { ReactComponent as ShoppingCart } from "../../assets/svg/shopping-cart.svg";
 import person1 from "../../assets/images/person-1.png";
 import person2 from "../../assets/images/person-2.png";
 import person3 from "../../assets/images/person-3.png";
 import person4 from "../../assets/images/person-4.png";
+import CartSidebar from "../../components/cart-sidebar/cart-sidebar";
+import "./header.scss";
 
 const Header = () => {
+  const { setIsCartSidebarOpen } = useContext(SidebarContext);
+  const { cartItems } = useContext(CartContext);
   return (
     <>
       <header className="header">
@@ -50,8 +57,13 @@ const Header = () => {
         </div>
 
         <div className="badge-group">
-          <div className="badge">
-            <Badge count={2} color="yellow" offset={[-30, 0]}>
+          <div onClick={() => setIsCartSidebarOpen(true)} className="badge">
+            <Badge
+              showZero
+              count={cartItems.length}
+              color="yellow"
+              offset={[-30, 0]}
+            >
               <Avatar icon={<Icon component={ShoppingCart} />} />
             </Badge>
           </div>
@@ -65,6 +77,7 @@ const Header = () => {
       <div>
         <Outlet />
       </div>
+      <CartSidebar />
     </>
   );
 };

@@ -1,0 +1,30 @@
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  .product-item-left {
+    display: flex;
+    align-items: center;
+    .product-item-left-info {
+      margin-left: 5px;
+      font-size: var(--i-cloudy-font-size-x-x-small);
+      h2 {
+        font-size: var(--i-cloudy-font-size-x-small);
+        margin: 0;
+      }
+    }
+  }
+  .product-item-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    .input-number {
+      width: 60px;
+    }
+    .delete-icon {
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  }
+}
